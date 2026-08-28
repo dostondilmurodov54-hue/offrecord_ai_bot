@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: shaxsiy-yordamchi-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements_groq.txt"
+    startCommand: "python main_groq.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ASSISTANT_NAME
+        value: "Yordamchi"
